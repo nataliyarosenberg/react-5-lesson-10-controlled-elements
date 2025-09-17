@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import SearchBar from "../SearchBar/SearchBar";
-import MovieGrid from "../MovieGrid/MovieGrid";
-import type { Movie } from "../../types/movie";
+import SearchBar from "../TaskList/TaskList";
+import MovieGrid from "../TaskForm/TaskForm";
+import type { Movie } from "../../types/task";
 import MovieModal from "../MovieModal/MovieModal";
-import { fetchMovies } from "../../services/movieService";
+import { fetchMovies } from "../../services/taskService";
 import css from "./App.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import Loader from "../Loader/Loader";
-import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import ErrorMessage from "../Modal/Modal";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import ReactPaginate from "react-paginate";
-import type { FetchMoviesResponse } from "../../services/movieService";
+import type { FetchMoviesResponse } from "../../services/taskService";
 
 
 
